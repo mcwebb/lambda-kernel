@@ -3,6 +3,11 @@ Kernel to handle and provide structure to requests and responses for AWS Lambda 
 
 This module provides the necessary building blocks for you to build a structured Lambda function. Initially it is targeting Serverless v1, but easily used for vanilla Lambda.
 
+## Install
+```
+npm i -S lambda-kernel
+```
+
 ## Basic Usage
 ```javascript
 // handler.js (the lambda entrypoint)
