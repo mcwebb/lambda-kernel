@@ -1,0 +1,28 @@
+{
+  "name": "lambda-kernel",
+  "version": "0.0.0",
+  "description": "Kernel to handle request and response for AWS Lambda and Serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mcwebb/lambda-kernel.git"
+  },
+  "keywords": [
+    "lambda",
+    "serverless",
+    "kernel",
+    "request",
+    "response",
+    "middleware",
+    "dispatch"
+  ],
+  "author": "Matthew Webb <matthewowebb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcwebb/lambda-kernel/issues"
+  },
+  "homepage": "https://github.com/mcwebb/lambda-kernel#readme"
+}
