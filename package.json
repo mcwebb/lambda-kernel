@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/mcwebb/lambda-kernel/issues"
   },
-  "homepage": "https://github.com/mcwebb/lambda-kernel#readme"
+  "homepage": "https://github.com/mcwebb/lambda-kernel#readme",
+  "dependencies": {
+    "lodash.partialright": "^4.2.1"
+  }
 }
