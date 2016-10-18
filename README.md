@@ -33,6 +33,7 @@ module.exports = {
 ```
 
 ## Middleware
-You can create middleware by extending the middlware class and passing your middleware classes in an array as the second parameter of the `kernel.dispatch` method.
-The return value of the `Middleware#create` method will be provided to the controller method in the order that the middleware was provided (after the `req`, `env` parameters).
+You can create middleware by extending the middlware class and passing your middleware instances in an array as the second parameter of the `kernel.dispatch` method.
+`Middleware#create` is passed the same `req` and `env` parameters as controller methods.
+The return value of the `Middleware#create` method will then be provided to the controller method in the order that the middleware was provided (after the `req`, `env` parameters).
 
