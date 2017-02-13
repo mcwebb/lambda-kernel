@@ -12,9 +12,13 @@ npm i -S lambda-kernel
 ```javascript
 // handler.js (the lambda entrypoint)
 
-const kernel = require('lambda-kernel');
+const Kernel = require('lambda-kernel');
 // controller is your own business logic
 const controller = require('./lib/controller');
+
+// instantiate the kernel, global configuration
+// can be passed into the constructor here
+const kernel = new Kernel();
 
 module.exports = {
   exampleName: kernel.dispatch(controller.exampleName)
