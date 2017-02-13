@@ -1,8 +1,3 @@
-const partialRight = require('lodash.partialright');
-const dispatcher = require('./lib/dispatcher');
+'use strict';
 
-module.exports = {
-  dispatch: function (action, middleware) {
-    return partialRight(dispatcher, action, middleware)
-  }
-};
+module.exports = require('./lib/Kernel');

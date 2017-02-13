@@ -1,0 +1,59 @@
+# Lambda Kernel
+Kernel to handle and provide structure to requests and responses for AWS Lambda and Serverless.
+
+[![view on npm](https://img.shields.io/npm/v/lambda-kernel.svg)](https://img.shields.io/npm/v/lambda-kernel.svg)
+
+This module provides the necessary building blocks for you to build a structured Lambda function.
+Initially it is targeting Serverless v1, but easily used for vanilla Lambda.
+
+## Install
+```
+npm i -S lambda-kernel
+```
+
+## Basic Usage
+```javascript
+// handler.js (the lambda entrypoint)
+
+const Kernel = require('lambda-kernel');
+// controller is your own business logic
+const controller = require('./lib/controller');
+
+// instantiate the kernel, global configuration
+// can be passed into the constructor here
+const kernel = new Kernel();
+
+module.exports = {
+  exampleAction: kernel.dispatch(controller.exampleAction)
+};
+```
+
+```javascript
+// ./lib/controller.js (your business logic)
+
+const Response = require('lambda-kernel/lib/Response');
+
+module.exports = {
+  exampleAction: (req, env) => {
+    return new Response(`this is an example in ${env.stage}`, 200);
+  }
+};
+```
+
+### Middleware
+Middleware provides a clean and re-usable way to instantiate services needed for your actions.
+You can create middleware by extending the middleware class and passing your middleware
+instances in an array into the Kernel constructor to apply it globally or as a parameter of the dispatch method to
+apply it to that action only.
+
+`Middleware#create` is passed the same `req` and `env` parameters as controller methods.
+The return value of the `Middleware#create` method will then be provided to the controller method
+in the order that the middleware was provided (after the `req`, `env` parameters).
+
+Action-specific middleware is always provided in order after the Kernel middleware.
+
+{{>main}}
+
+* * *
+
+&copy; 2017 Matthew Webb
