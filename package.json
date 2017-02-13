@@ -30,9 +30,10 @@
   },
   "homepage": "https://github.com/mcwebb/lambda-kernel#readme",
   "dependencies": {
-    "jsdoc-to-markdown": "^3.0.0",
     "lodash.isarray": "^4.0.0",
     "lodash.partialright": "^4.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jsdoc-to-markdown": "^3.0.0"
+  }
 }
