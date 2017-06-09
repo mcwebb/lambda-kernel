@@ -295,20 +295,21 @@ to handle the request to response lifecycle.
 **Kind**: global class  
 
 * [Kernel](#Kernel)
-    * [new Kernel([transformer], [middlewares], [options])](#new_Kernel_new)
+    * [new Kernel([options])](#new_Kernel_new)
     * [.dispatch(action, [middleware])](#Kernel+dispatch) ⇒
 
 <a name="new_Kernel_new"></a>
 
-### new Kernel([transformer], [middlewares], [options])
+### new Kernel([options])
 Construct a new kernel with the provided options.
 
 
 | Param | Type |
 | --- | --- |
-| [transformer] | <code>[Transformer](#Transformer)</code> | 
-| [middlewares] | <code>[Array.&lt;Middleware&gt;](#Middleware)</code> | 
 | [options] | <code>Object</code> | 
+| [options.transformer] | <code>[Transformer](#Transformer)</code> | 
+| [options.middlewares] | <code>[Array.&lt;Middleware&gt;](#Middleware)</code> | 
+| [options.forceEnd] | <code>boolean</code> | 
 
 <a name="Kernel+dispatch"></a>
 
