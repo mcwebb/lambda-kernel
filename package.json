@@ -1,6 +1,6 @@
 {
   "name": "lambda-kernel",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Kernel to handle request and response for AWS Lambda and Serverless",
   "main": "index.js",
   "scripts": {
